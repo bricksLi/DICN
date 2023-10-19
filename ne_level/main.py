@@ -16,13 +16,13 @@ from termcolor import cprint
 from tqdm import tqdm
 from sklearn.metrics import f1_score
 
-from ..SuperGAT.arguments import get_important_args, save_args, get_args, pprint_args, get_args_key
-from ..SuperGAT.data import getattr_d, get_dataset_or_loader
-from ..SuperGAT.model import SuperGATNet, LargeSuperGATNet
-from ..SuperGAT.model_baseline import LinkGNN, CGATNet, MLPNet
-from ..SuperGAT.layer import SuperGAT
-from ..SuperGAT.layer_cgat import CGATConv
-from ..SuperGAT.utils import create_hash, to_one_hot, get_accuracy, cprint_multi_lines, blind_other_gpus
+from ..ne_level.arguments import get_important_args, save_args, get_args, pprint_args, get_args_key
+from ..ne_level.data import getattr_d, get_dataset_or_loader
+from ..ne_level.model import SuperGATNet, LargeSuperGATNet
+# from ..ne_level.model_baseline import LinkGNN, CGATNet, MLPNet
+from ..ne_level.layer import SuperGAT
+from ..ne_level.layer_cgat import CGATConv
+from ..ne_level.utils import create_hash, to_one_hot, get_accuracy, cprint_multi_lines, blind_other_gpus
 
 
 def get_model_path(target_epoch, _args, **kwargs):

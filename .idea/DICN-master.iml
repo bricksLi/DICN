@@ -2,7 +2,7 @@
 <module type="PYTHON_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/SuperGAT" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/ne_level" isTestSource="false" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.7 (SuperGAT-master)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
@@ -14,7 +14,7 @@
   <component name="PyNamespacePackagesService">
     <option name="namespacePackageFolders">
       <list>
-        <option value="$MODULE_DIR$/SuperGAT" />
+        <option value="$MODULE_DIR$/ne_level" />
       </list>
     </option>
   </component>

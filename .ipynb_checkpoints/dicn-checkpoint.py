@@ -12,11 +12,11 @@ from torch.optim import Adam
 import networkx as nx
 
 
-from ne_level.model import SuperGATNet
-from ne_level.arguments import get_args
-from ne_level.data import getattr_d, get_dataset_or_loader
-from ne_level.layer import SuperGAT
-from ne_level.layer_cgat import CGATConv
+from SuperGAT.model import SuperGATNet
+from SuperGAT.arguments import get_args
+from SuperGAT.data import getattr_d, get_dataset_or_loader
+from SuperGAT.layer import SuperGAT
+from SuperGAT.layer_cgat import CGATConv
 
 from torch_geometric.datasets import Planetoid
 
@@ -27,10 +27,10 @@ from evaluation import eva
 import community
 
 
-class DICN(nn.Module):
+class DAEGC(nn.Module):
     def __init__(self, device, dropout, edge_num, embedding_vg, num_features, node_num, embedding_size, alpha,
                  num_clusters, v=1):
-        super(DICN, self).__init__()
+        super(DAEGC, self).__init__()
         self.num_clusters = num_clusters
         self.v = v
         self.node_num = node_num
@@ -152,7 +152,7 @@ def trainer(dataset, device):
     temp_min = 0.3
     temp = 1.
 
-    model = DICN(device, args.dropout, edge_num=args.edge_size, embedding_vg=args.embedding_vg,
+    model = DAEGC(device, args.dropout, edge_num=args.edge_size, embedding_vg=args.embedding_vg,
                   num_features=args.input_dim, node_num=args.node_num,
                   embedding_size=args.embedding_size, alpha=args.alpha, num_clusters=args.n_clusters).to(device)
 
